@@ -1,0 +1,60 @@
+<section class="body-lines">
+	<h2 class="font-extrabold text-red-400 text-5xl text-center p-6 mt-5">
+		Make ur mine
+	</h2>
+	<img
+		src="/flower.png"
+		alt=""
+		class="block mx-auto w-62.5 img-flower hover:drop-shadow-yellow-500 drop-shadow-2xl"
+	/>
+
+	<div class="absolute btn-dc">
+		<button
+			class="px-8 z-30 py-4 bg-rose-400 rounded-md text-white relative font-semibold after:-z-10 after:absolute after:h-1 after:w-1 after:bg-rose-800 after:left-5 overflow-hidden after:bottom-0 after:translate-y-full after:rounded-md after:hover:scale-[300] after:hover:transition-all after:hover:duration-700 after:transition-all after:duration-700 transition-all duration-700 [text-shadow:3px_5px_2px_#be123c;] hover:[text-shadow:2px_2px_2px_#fda4af] text-2xl cursor-pointer"
+		>
+			Click aquí
+		</button>
+	</div>
+
+	<div class="lines">
+		<div class="line"></div>
+		<div class="line"></div>
+		<div class="line"></div>
+		<div class="line"></div>
+		<div class="line"></div>
+		<div class="line"></div>
+		<div class="line"></div>
+		<div class="line"></div>
+		<div class="line"></div>
+		<div class="line"></div>
+	</div>
+</section>
+
+<script>
+	import Swal from "sweetalert2";
+
+	const flower = document.querySelector(".img-flower");
+	const body = document.body;
+
+	flower?.addEventListener("click", () => {
+		Swal.fire({
+			title: "Lamento mi actutud contigo...",
+			html: `
+    Estos ultimos dias Jossy hay una musica que representa lo que ando sintiendo con todo esto...
+    <a href="https://www.youtube.com/watch?v=oAHWySVCDjk&list=RDoAHWySVCDjk&start_radio=1" target="_blank" class="target-btn">ESCUCHALA :D</a>
+  `,
+			imageUrl: "/tulipanes.webp",
+			imageWidth: 250,
+			imageHeight: 250,
+			imageAlt: "Custom image",
+			confirmButtonText: "Hablamos cuando estés lista",
+			showCancelButton: true,
+			cancelButtonText: "Prefiero mi tranquilidad",
+		});
+		setTimeout(() => {
+			flower.classList.add(".invisible");
+			body?.classList.remove("swal2-height-auto");
+			flower.classList.remove(".invisible");
+		}, 1);
+	});
+</script>
